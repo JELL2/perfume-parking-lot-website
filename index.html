@@ -1,135 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PPL</title>
-    <style>
-        body{
-            margin: 0px;
-            box-sizing: border-box;
-            font-size: 14px;
-            font-family: monospace;
-        }
-        .page-wrap{
-            width: 100vw;
-            height: 100vh;
-            background-color: white;
-            overflow: scroll;
-        }
-        #header{
-            top: 0;
-            position: sticky;
-            background-color: white;
-            /* color: white; */
-            width: 100%;
-            padding: 1rem;
-            font-size: 18px;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            font-weight: bold;
-            font-style: italic;
-        }
-        .page-wrap,#header{
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-        }
-        .content-wrap{
-            width: 100%;
-            background-color: black;
-        }
-        .content-wrap
-        .grid-container{
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            /* column-gap: 1rem;
-            padding: 1rem 0rem 1rem 1rem; */
-        }
-        .tile-image{
-            background-color: black;
-            /* height: 100px; */
-        }
-        .tile-text{
-            /* background-color: purple; */
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- link to get masonry -->
+  <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <title>IDS,ID</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-        }
-        .section-container{
-            /* background-color: sandybrown; */
-            /* height: 200px; */
-        }
-        .content-wrap .section-container,.content-wrap .grid-container{
-            margin-top: 2rem;
-        }
-        .intro-gif-container{
-            /* margin: 1rem; */
-            width: 60%;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .footer{
-            /* width: 100%; */
-            background-color:white;
+    /* desktop */
+    @media screen and (min-width: 800px) {
+      *{
+        /* box-shadow: 5px 7px 13px 0px rgb(0 0 0 / 20%);
+        border-radius: 3px; */
+        font-family: Arial, Helvetica, sans-serif;
+        /* font-weight: bold; */
+      }
 
-            display: flex;
-            justify-content: space-around;
-            padding: 1rem;
-            font-size: 16px;
-            position: sticky;
-            bottom: 0;
-        }
-        img{
-            width: 100%;
-        }
-    </style>
+      #main-title{
+        font-size: 1.7rem;
+      }
+
+      #main-container{
+        background-color: white;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+        /* min-width: 600px; */
+      }
+
+      #content{
+        background-color: whitesmoke;
+        width: 750px;
+        height: 100%;
+        margin-left: auto;
+        margin-right: auto;
+
+        overflow: auto;
+        padding: 0 20px 0 20px;
+
+        position: relative;
+      }
+
+      #artwork{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
+
+      #artwork-back{
+        position: absolute;
+        top: 20px;
+        left: -100px;
+        width: 20%;
+        z-index: 9999;
+      }
+
+      #landing-message{
+        font-weight: bold;
+        text-align: center;
+        width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  </style>
+  <!-- temporary js for masonry -->
 </head>
 <body>
-    <div class="page-wrap">
-        <div id="header">
-            PERFUME PARKING LOT
-        </div>
-        <div class="content-wrap">
-            <div class="section-container">
-                <div class="intro-gif-container">
-                    <img src="live-loop.gif" alt="">
-                </div>
-            </div>
-            <!-- <div class="grid-container">
-                <div class="tile-image">
-                    <img src="live-loop.gif" alt="">
-                </div>
-                <div class="tile-text" style="background-color: black;"></div>
-            </div> -->
-            <div class="grid-container">
-                <div class="tile-text"></div>
-                <div class="tile-image">
-                    <img src="img.jpg" alt="">
-                </div>
-            </div>
-            <div class="section-container">
-                <img src="landing-vid.gif" alt="">
-            </div>
-            <div class="grid-container">
-                <div class="tile-image">
-                    <img src="IMG_1580.png" alt="">
-                </div>
-                <div class="tile-text"></div>
-            </div>
-            <div class="section-container">
-                <img src="output2.gif" alt="">
-            </div>
-            <div class="grid-container">
-                <div class="tile-text"></div>
-                <div class="tile-image">
-                    <img src="IMG_2201.JPG" alt="">
-                </div>
-            </div>
-            <div class="footer">
-                <a href="">instagram</a>
-                <a href="">twitter</a>
-                <a href="">youtube</a>
-            </div>
-        </div>
+  <div id="main-container">
+    <div id="content">
+      <h3 id="main-title">perfume parking lot</h3>
+      <img src="images/artwork.jpg" alt="" width="70%" id="artwork">
+      <!-- <img src="images/artwork-back.jpg" alt="" id="artwork-back"> -->
+      <p id="landing-message">Perfume Parking Lot is an electronic music project that is releasing it's first ep. <i>"i dont sleep, i dream"</i> in January 2022.</p>
     </div>
+  </div>
+  <script>
+    // js code going here
+  </script>
 </body>
 </html>
