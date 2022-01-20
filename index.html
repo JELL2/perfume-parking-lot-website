@@ -133,6 +133,7 @@
   <div id="overlay"></div>
   <script>
     audioPlayer();
+
     function audioPlayer(){
     var currentSong = 0;
     $("#audioPlayer")[0].src = $("#playlist li a")[0];
@@ -155,6 +156,7 @@
         $("#audioPlayer")[0].src = $("#playlist li a")[currentSong].href;
         $("#audioPlayer")[0].play();
     });
+
 }
   </script>
 </body>
