@@ -119,20 +119,42 @@
       <!-- <img src="images/artwork-back.jpg" alt="" id="artwork-back"> -->
       <p id="landing-message">Perfume Parking Lot is an electronic music project that is releasing it's first ep. <i>"i dont sleep, i dream"</i> in January 2022.</p>
       <div id="audio-player">
-        <audio src="" controls></audio>
-        <ul>
-          <li><a href="">1. i don't sleep, i dream</a></li>
-          <li><a href="">2. darlene</a></li>
-          <li><a href="">3. london fields</a></li>
-          <li><a href="">4. permafrost</a></li>
-          <li><a href="">5. please</a></li>
-          <li><a href="">6. time</a></li>
+        <audio src="" controls controlsList="nodownload" id="audioPlayer"></audio>
+        <ul id="playlist">
+          <li><a href="album/new-intro-wormington.mp3">1. i don't sleep, i dream</a></li>
+          <li><a href="album/darlene-final-1.wav">2. darlene</a></li>
+          <li><a href="album/WR12.wav">3. london fields</a></li>
+          <li><a href="album/permafrost.wav">4. permafrost</a></li>
+          <li><a href="album/please-single.wav">5. please</a></li>
+          <li><a href="album/time.wav">6. time</a></li>
         </ul>
       </div>
     </div>
   <div id="overlay"></div>
   <script>
-    // js code going here
+    function audioPlayer(){
+    var currentSong = 0;
+    $("#audioPlayer")[0].src = $("#playlist li a")[0];
+    $("#audioPlayer")[0].play();
+    $("#playlist li a").click(function(e){
+      e.preventDefault(); 
+      $("#audioPlayer")[0].src = this;
+      $("#audioPlayer")[0].play();
+      $("#playlist li").removeClass("current-song");
+        currentSong = $(this).parent().index();
+        $(this).parent().addClass("current-song");
+    });
+    
+    $("#audioPlayer")[0].addEventListener("ended", function(){
+      currentSong++;
+        if(currentSong == $("#playlist li a").length)
+            currentSong = 0;
+        $("#playlist li").removeClass("current-song");
+        $("#playlist li:eq("+currentSong+")").addClass("current-song");
+        $("#audioPlayer")[0].src = $("#playlist li a")[currentSong].href;
+        $("#audioPlayer")[0].play();
+    });
+}
   </script>
 </body>
 </html>
