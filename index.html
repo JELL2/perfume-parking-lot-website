@@ -17,7 +17,7 @@
     }
 
     /* desktop */
-    @media screen and (min-width: 800px) {
+    @media screen and (min-width: 0px) {
       *{
         /* box-shadow: 5px 7px 13px 0px rgb(0 0 0 / 20%);
         border-radius: 3px; */
@@ -132,6 +132,7 @@
     </div>
   <div id="overlay"></div>
   <script>
+    audioPlayer();
     function audioPlayer(){
     var currentSong = 0;
     $("#audioPlayer")[0].src = $("#playlist li a")[0];
