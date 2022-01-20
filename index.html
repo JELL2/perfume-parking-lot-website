@@ -12,6 +12,9 @@
     * {
       box-sizing: border-box;
     }
+    body{
+      margin: 0;
+    }
 
     /* desktop */
     @media screen and (min-width: 800px) {
@@ -24,23 +27,15 @@
 
       #main-title{
         font-size: 1.7rem;
-      }
-
-      #main-container{
-        background-color: white;
-        position: absolute;
+        position: sticky;
         top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-
-        /* min-width: 600px; */
       }
 
       #content{
         background-color: whitesmoke;
-        width: 750px;
-        height: 100%;
+        /* antiquewhite */
+        /* width: 750px; */
+        height: 1600px;
         margin-left: auto;
         margin-right: auto;
 
@@ -56,6 +51,8 @@
         margin-right: auto;
         margin-top: 1.5rem;
         margin-bottom: 1.5rem;
+        box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+
       }
 
       #artwork-back{
@@ -72,20 +69,68 @@
         width: 300px;
         margin-left: auto;
         margin-right: auto;
+        padding: 2rem;
       }
+
+      #overlay{
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-image: linear-gradient(rgba(255,255,255,0) 85%, white 100%);
+        pointer-events: none;
+      }
+
+      #audio-player{
+        margin-left: auto;
+        margin-right: auto;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: #fafafa;
+        padding-top: 1em;
+
+        width: 400px;
+        box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+        border: solid 2px black;
+      }
+
+      #audio-player ul{
+        list-style: none;
+        padding: 0;
+      }
+
+      #audio-player ul a{
+        text-decoration: none;
+        color: rgb(152, 0, 0);
+      }
+
     }
   </style>
   <!-- temporary js for masonry -->
 </head>
 <body>
-  <div id="main-container">
     <div id="content">
       <h3 id="main-title">perfume parking lot</h3>
       <img src="images/artwork.jpg" alt="" width="70%" id="artwork">
       <!-- <img src="images/artwork-back.jpg" alt="" id="artwork-back"> -->
       <p id="landing-message">Perfume Parking Lot is an electronic music project that is releasing it's first ep. <i>"i dont sleep, i dream"</i> in January 2022.</p>
+      <div id="audio-player">
+        <audio src="" controls></audio>
+        <ul>
+          <li><a href="">1. i don't sleep, i dream</a></li>
+          <li><a href="">2. darlene</a></li>
+          <li><a href="">3. london fields</a></li>
+          <li><a href="">4. permafrost</a></li>
+          <li><a href="">5. please</a></li>
+          <li><a href="">6. time</a></li>
+        </ul>
+      </div>
     </div>
-  </div>
+  <div id="overlay"></div>
   <script>
     // js code going here
   </script>
