@@ -8,166 +8,50 @@
   <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <title>IDS,ID</title>
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-    body{
-      margin: 0;
-      color: white;
-      font-size: 20px;
-    }
-
-    /* desktop */
-    @media screen and (min-width: 0px) {
-      *{
-        /* box-shadow: 5px 7px 13px 0px rgb(0 0 0 / 20%);
-        border-radius: 3px; */
-        font-family: Arial, Helvetica, sans-serif;
-        /* font-weight: bold; */
-      }
-
-      #main-title{
-        font-size: 1.7rem;
-        position: sticky;
-        top: 0;
-      }
-
-      #content{
-        background-color: #2a2a2a;
-        /* #2a2a2a */
-        /* antiquewhite */
-        /* width: 750px; */
-        height: 1600px;
-        margin-left: auto;
-        margin-right: auto;
-
-        overflow: auto;
-        padding: 0 20px 0 20px;
-
-        position: relative;
-      }
-
-      #artwork{
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 1.5rem;
-        margin-bottom: 1.5rem;
-        width: 100%;
-        box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
-
-      }
-
-      #artwork-back{
-        position: absolute;
-        top: 20px;
-        left: -100px;
-        width: 20%;
-        z-index: 9999;
-      }
-
-      #landing-message{
-        font-weight: bold;
-        text-align: center;
-        width: 300px;
-        margin-left: auto;
-        margin-right: auto;
-        padding: 2rem;
-      }
-
-      #overlay{
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        background-image: linear-gradient(rgba(255,255,255,0) 85%, white 100%);
-        pointer-events: none;
-      }
-
-      #audio-player{
-        margin-left: auto;
-        margin-right: auto;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        background-color: #383838;
-        padding-top: 1em;
-
-        /* width: 400px; */
-        box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
-        /* border: solid 2px black; */
-        /* #383838 */
-      }
-
-      #audio-player ul{
-        list-style: none;
-        padding: 0;
-      }
-
-      #audio-player ul a{
-        text-decoration: none;
-        color: white;
-        /* background-color: white; */
-        /* color: rgb(152, 0, 0); */
-      }
-
-      /* color for selected track rgb(255 111 111) */
-
-    }
-  </style>
+  <link rel="stylesheet" href="css/new-styling.css">
   <!-- temporary js for masonry -->
 </head>
 <body>
-    <div id="content">
-      <h2 id="main-title">perfume parking lot</h2>
-      <img src="images/artwork.jpg" alt="" id="artwork">
-      <!-- <img src="images/artwork-back.jpg" alt="" id="artwork-back"> -->
-      <p id="landing-message">Perfume Parking Lot is an electronic music project that is releasing it's first ep. <i>"i dont sleep, i dream"</i> in January 2022.</p>
-      <div id="audio-player">
-        <audio src="" controls controlsList="nodownload" id="audioPlayer"></audio>
-        <ul id="playlist">
-          <li><a href="album/new-intro-wormington.mp3">1. i don't sleep, i dream</a></li>
-          <li><a href="album/darlene-final-1.wav">2. darlene</a></li>
-          <li><a href="album/WR12.wav">3. london fields</a></li>
-          <li><a href="album/permafrost.wav">4. permafrost</a></li>
-          <li><a href="album/please-single.wav">5. please</a></li>
-          <li><a href="album/time.wav">6. time</a></li>
-        </ul>
+  <div id="page-wrap">
+    <h3>Perfume Parking Lot</h3>
+    <div class="content">
+      <div id="artwork-container">
+        <img src="images/artwork.jpg" alt="" id="artwork">
+        <div id="player">
+          <audio src="" controls></audio>
+          <ul>
+            <li>1. track</li>
+            <li>2. track</li>
+            <li>3. track</li>
+          </ul>
+        </div>
+      </div>
+      <div id="text-container">
+        <p id="landing-message">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+      <div id="gallery">
+        <img src="images/artwork-back.jpg" alt="" id="artwork">
+        <img src="gallery/224B88F6-C1F9-438C-966B-6B7398986C16.jpg" alt="" id="artwork">
+        <img src="gallery/74880129-D8B0-4202-9F64-EB049C1470B6.jpg" alt="" id="artwork">
+        <img src="gallery/8819A3C4-E32B-4D20-968D-A196ECE26445.jpg" alt="" id="artwork">
+        <img src="gallery/9F73624A-970A-4BFF-9103-8AD386AFB5AC.jpg" alt="" id="artwork">
+        <img src="gallery/B215B0D9-0682-4CBF-8497-9309EBDAE4A8.jpg" alt="" id="artwork">
+        <img src="gallery/E8548B6D-AEC7-4315-83E2-7E01F7BC79F3.jpg" alt="" id="artwork">
+        <img src="gallery/F0B1BCF1-E111-4D57-A1D3-51DABC0BB7C8.jpg" alt="" id="artwork">
+        <img src="gallery/FF0269F0-0299-4D92-94B9-939DBA0D572F.jpg" alt="" id="artwork">
+      </div>
+          <div id="text-container">
+        <p id="landing-message">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+      <div id="footer">
+        <div id="footnote">
+          credits going here
+        </div>
+        <div id="ig-link"></div>
       </div>
     </div>
-  <div id="overlay"></div>
-  <script>
-    // audioPlayer();
-
-    function audioPlayer(){
-    var currentSong = 0;
-    $("#audioPlayer")[0].src = $("#playlist li a")[0];
-    $("#audioPlayer")[0].play();
-    $("#playlist li a").click(function(e){
-      e.preventDefault(); 
-      $("#audioPlayer")[0].src = this;
-      $("#audioPlayer")[0].play();
-      $("#playlist li").removeClass("current-song");
-        currentSong = $(this).parent().index();
-        $(this).parent().addClass("current-song");
-    });
-    
-    $("#audioPlayer")[0].addEventListener("ended", function(){
-      currentSong++;
-        if(currentSong == $("#playlist li a").length)
-            currentSong = 0;
-        $("#playlist li").removeClass("current-song");
-        $("#playlist li:eq("+currentSong+")").addClass("current-song");
-        $("#audioPlayer")[0].src = $("#playlist li a")[currentSong].href;
-        $("#audioPlayer")[0].play();
-    });
-
-}
-  </script>
+  </div>
+  
+  <script src="js/audioPlayer.js"></script>
 </body>
 </html>
