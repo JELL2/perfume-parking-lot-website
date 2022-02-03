@@ -38,7 +38,7 @@ ul li a{
     overflow: hidden;
 }
 
-#artwork,#player{
+.artwork,#player{
     width: 100%;
     flex-shrink: 0;
     flex-grow: 0;
@@ -103,9 +103,15 @@ h4{
     font-size:.8rem;
 }
 #ig-link{
-    width:1.5rem;
+    /* width:1.5rem; */
+    padding-left: .5rem;
+    padding-right: .5rem;
     height:1.5rem;
-    background-color:rgb(201, 152, 160);
+    background-color:whitesmoke
+}
+
+#ig-link a{
+    color: grey;
 }
 
 audio{
