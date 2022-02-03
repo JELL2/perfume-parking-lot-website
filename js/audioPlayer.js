@@ -8,9 +8,9 @@
           e.preventDefault(); 
           $("#audioPlayer")[0].src = this;
           $("#audioPlayer")[0].play();
-          $("#playlist li").removeClass("current-song");
+          $("#playlist li a").removeClass("current-song");
             currentSong = $(this).parent().index();
-            $(this).parent().addClass("current-song");
+            $(this).addClass("current-song");
         });
         
         $("#audioPlayer")[0].addEventListener("ended", function(){
