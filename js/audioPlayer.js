@@ -1,9 +1,9 @@
-    // audioPlayer();
+    audioPlayer();
 
     function audioPlayer(){
         var currentSong = 0;
         $("#audioPlayer")[0].src = $("#playlist li a")[0];
-        $("#audioPlayer")[0].play();
+        // $("#audioPlayer")[0].play(); // this is autoplay
         $("#playlist li a").click(function(e){
           e.preventDefault(); 
           $("#audioPlayer")[0].src = this;
