@@ -102,8 +102,7 @@ h4{
 #footnote{
     font-size:.8rem;
 }
-#ig-link{
-    /* width:1.5rem; */
+/* #ig-link{
     padding-left: .5rem;
     padding-right: .5rem;
     height:1.5rem;
@@ -112,7 +111,7 @@ h4{
 
 #ig-link a{
     color: grey;
-}
+} */
 
 audio{
     width:80%;
@@ -124,4 +123,13 @@ ul{
 a{
     color: white;
     text-decoration: none;
+}
+
+.fa {
+    font-size: 30pt;
+    text-decoration: none;
+}
+
+.fa-instagram {
+    color: #ed5f5f;
 }
