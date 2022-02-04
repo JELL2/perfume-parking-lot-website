@@ -17,8 +17,8 @@
           currentSong++;
             if(currentSong == $("#playlist li a").length)
                 currentSong = 0;
-            $("#playlist li").removeClass("current-song");
-            $("#playlist li:eq("+currentSong+")").addClass("current-song");
+            $("#playlist li a").removeClass("current-song");
+            $("#playlist li:eq("+currentSong+")").children().addClass("current-song");
             $("#audioPlayer")[0].src = $("#playlist li a")[currentSong].href;
             $("#audioPlayer")[0].play();
         });
